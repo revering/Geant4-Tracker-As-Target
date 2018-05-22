@@ -1,5 +1,5 @@
-#ifndef G4DMPhysicsList
-#define G4DMPhysicsList 
+#ifndef TTargPhysicsList
+#define TTargPhysicsList 
 
 #include "G4VModularPhysicsList.hh"
 

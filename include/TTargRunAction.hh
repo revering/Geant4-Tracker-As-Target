@@ -7,11 +7,11 @@
 
 class G4Run;
 
-class G4DMRunAction : public G4UserRunAction
+class TTargRunAction : public G4UserRunAction
 {
    public:
-      G4DMRunAction();
-      virtual ~G4DMRunAction();
+      TTargRunAction();
+      virtual ~TTargRunAction();
 
       virtual void BeginOfRunAction(const G4Run*);
       virtual void EndOfRunAction(const G4Run*);

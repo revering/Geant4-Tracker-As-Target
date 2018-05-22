@@ -1,4 +1,4 @@
-#include "G4DMDetectorConstruction.hh"
+#include "TTargDetectorConstruction.hh"
 #include "G4Region.hh"
 #include "G4RunManager.hh"
 #include "G4NistManager.hh"

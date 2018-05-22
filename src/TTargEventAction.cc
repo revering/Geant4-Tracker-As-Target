@@ -1,5 +1,5 @@
-#include "G4DMEventAction.hh"
-#include "G4DMRunAction.hh"
+#include "TTargEventAction.hh"
+#include "TTargRunAction.hh"
 
 #include "G4Event.hh"
 #include "G4RunManager.hh"
@@ -8,7 +8,7 @@
 #include "G4ProductionCuts.hh"
 #include "G4ProcessTable.hh"
 
-G4DMEventAction::G4DMEventAction(G4DMRunAction* runAction)
+TTargEventAction::TTargEventAction(TTargRunAction* runAction)
  : G4UserEventAction(),
    fRunAction(runAction),
    fEdep(0.),
@@ -16,11 +16,11 @@ G4DMEventAction::G4DMEventAction(G4DMRunAction* runAction)
 {
 }
 
-G4DMEventAction::~G4DMEventAction()
+TTargEventAction::~TTargEventAction()
 {
 }
 
-void G4DMEventAction::BeginOfEventAction(const G4Event*)
+void TTargEventAction::BeginOfEventAction(const G4Event*)
 {
   fEdep = 0.;
 /*  G4Region* region;
@@ -42,12 +42,12 @@ void G4DMEventAction::BeginOfEventAction(const G4Event*)
      rstnBrem();
 }
 
-void G4DMEventAction::EndOfEventAction(const G4Event*)
+void TTargEventAction::EndOfEventAction(const G4Event*)
 {
 }
 
 
-G4DMRunAction* G4DMEventAction::GetRunAction() const
+TTargRunAction* TTargEventAction::GetRunAction() const
 {
    return fRunAction;
 }

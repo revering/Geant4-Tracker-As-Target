@@ -1,4 +1,4 @@
-#include "G4DMPrimaryGeneratorAction.hh"
+#include "TTargPrimaryGeneratorAction.hh"
 
 #include "G4RunManager.hh"
 #include "G4Event.hh"
@@ -10,7 +10,7 @@
 #include "G4SystemOfUnits.hh"
 #include "Randomize.hh"
 
-G4DMPrimaryGeneratorAction::G4DMPrimaryGeneratorAction()
+TTargPrimaryGeneratorAction::TTargPrimaryGeneratorAction()
  : G4VUserPrimaryGeneratorAction(), fParticleGun(0)
 {
    G4int n_particle = 1;
@@ -24,12 +24,12 @@ G4DMPrimaryGeneratorAction::G4DMPrimaryGeneratorAction()
    fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,1.,0.));
 }
 
-G4DMPrimaryGeneratorAction::~G4DMPrimaryGeneratorAction()
+TTargPrimaryGeneratorAction::~TTargPrimaryGeneratorAction()
 {
    delete fParticleGun;
 }
 
-void G4DMPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
+void TTargPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
 
    fParticleGun->SetParticlePosition(G4ThreeVector(-50*cm,-110*cm,0));

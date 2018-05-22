@@ -1,6 +1,6 @@
-#include "G4DMSteppingAction.hh"
-#include "G4DMEventAction.hh"
-#include "G4DMDetectorConstruction.hh"
+#include "TTargSteppingAction.hh"
+#include "TTargEventAction.hh"
+#include "TTargDetectorConstruction.hh"
 
 #include "G4Step.hh"
 #include "G4Event.hh"
@@ -15,7 +15,7 @@
 #include "G4DarkPhoton.hh"
 #include "G4ProcessTable.hh"
 
-G4DMSteppingAction::G4DMSteppingAction(G4DMEventAction* eventAction)
+TTargSteppingAction::TTargSteppingAction(TTargEventAction* eventAction)
  : G4UserSteppingAction(),
    fEventAction(eventAction),
    fScoringVolume(0),
@@ -23,11 +23,11 @@ G4DMSteppingAction::G4DMSteppingAction(G4DMEventAction* eventAction)
 {
 }
 
-G4DMSteppingAction::~G4DMSteppingAction()
+TTargSteppingAction::~TTargSteppingAction()
 {
 }
 
-void G4DMSteppingAction::UserSteppingAction(const G4Step* step)
+void TTargSteppingAction::UserSteppingAction(const G4Step* step)
 {
    if((fEventAction->GetnBrem())==0)
    {

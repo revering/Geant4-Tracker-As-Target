@@ -6,9 +6,9 @@
 #include "G4RunManager.hh"
 #endif
 
-#include "G4DMPhysicsList.hh"
-#include "G4DMDetectorConstruction.hh"
-#include "G4DMActionInitialization.hh"
+#include "TTargPhysicsList.hh"
+#include "TTargDetectorConstruction.hh"
+#include "TTargActionInitialization.hh"
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
 
@@ -22,7 +22,7 @@ int main( int argc, char** argv )
 
    runManager->SetUserInitialization(new DMDetectorConstruction);
    runManager->SetUserInitialization(new DMPhysicsList);
-   runManager->SetUserInitialization(new G4DMActionInitialization());
+   runManager->SetUserInitialization(new TTargActionInitialization());
 
 
    runManager->Initialize();

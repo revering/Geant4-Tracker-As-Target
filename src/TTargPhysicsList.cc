@@ -1,4 +1,4 @@
-#include "G4DMPhysicsList.hh"
+#include "TTargPhysicsList.hh"
 #include "G4EmStandardPhysics.hh"
 #include "G4DarkPhoton.hh"
 #include "G4PhysicsListHelper.hh"
