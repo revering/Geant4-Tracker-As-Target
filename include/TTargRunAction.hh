@@ -1,5 +1,5 @@
-#ifndef B1RunAction_h
-#define B1RunAction_h 1
+#ifndef TTargRunAction_h
+#define TTargRunAction_h 1
 
 #include "G4UserRunAction.hh"
 #include "G4Parameter.hh"
@@ -13,6 +13,7 @@ class TTargRunAction : public G4UserRunAction
       TTargRunAction();
       virtual ~TTargRunAction();
 
+      G4Run* GenerateRun();
       virtual void BeginOfRunAction(const G4Run*);
       virtual void EndOfRunAction(const G4Run*);
       

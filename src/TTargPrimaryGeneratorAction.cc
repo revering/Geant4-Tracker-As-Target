@@ -19,9 +19,9 @@ TTargPrimaryGeneratorAction::TTargPrimaryGeneratorAction()
    G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
    G4ParticleDefinition* particle = particleTable->FindParticle("e-");
    fParticleGun->SetParticleDefinition(particle);
-   fParticleGun->SetParticlePosition(G4ThreeVector(-100.,0.,0.));
-   fParticleGun->SetParticleEnergy(4*GeV);
-   fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,1.,0.));
+   fParticleGun->SetParticlePosition(G4ThreeVector(0.,0.,0.));
+   fParticleGun->SetParticleEnergy(45*GeV);
+   fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));
 }
 
 TTargPrimaryGeneratorAction::~TTargPrimaryGeneratorAction()
@@ -32,9 +32,6 @@ TTargPrimaryGeneratorAction::~TTargPrimaryGeneratorAction()
 void TTargPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
 
-   fParticleGun->SetParticlePosition(G4ThreeVector(-50*cm,-110*cm,0));
-   fParticleGun->GeneratePrimaryVertex(anEvent);
-
-   fParticleGun->SetParticlePosition(G4ThreeVector(50*cm,-110*cm,0));
+   fParticleGun->SetParticlePosition(G4ThreeVector(0*cm,0*cm,-1.0*cm));
    fParticleGun->GeneratePrimaryVertex(anEvent);
 }

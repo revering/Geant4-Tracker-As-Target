@@ -30,7 +30,7 @@ DMPhysicsList::~DMPhysicsList()
 void DMPhysicsList::SetCuts()
 {
    G4VUserPhysicsList::SetCuts();
-   SetCutValue(100000000*CLHEP::mm,"DarkPhoton");
+   SetCutValue(0.01*CLHEP::mm,"DarkPhoton");
  
 
    G4Region* region;
@@ -42,11 +42,11 @@ void DMPhysicsList::SetCuts()
 //   cuts->SetProductionCut(0.01*CLHEP::mm,G4ProductionCuts::GetIndex("e+"));
 //   cuts->SetProductionCut(0.01*CLHEP::mm,G4ProductionCuts::GetIndex("gamma"));
 
-   regName = "Tracker";
+/*   regName = "Tracker";
    region = G4RegionStore::GetInstance()->GetRegion(regName);
    cuts->SetProductionCut(0.01*CLHEP::mm,G4ProductionCuts::GetIndex("DarkPhoton"));
    region->SetProductionCuts(cuts);
-
+*/
 }
 
 void DMPhysicsList::ConstructParticle()

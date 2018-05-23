@@ -177,9 +177,33 @@ CMakeFiles/TTarg.dir/src/TTargPrimaryGeneratorAction.cc.o.provides: CMakeFiles/T
 CMakeFiles/TTarg.dir/src/TTargPrimaryGeneratorAction.cc.o.provides.build: CMakeFiles/TTarg.dir/src/TTargPrimaryGeneratorAction.cc.o
 
 
+CMakeFiles/TTarg.dir/src/TTargRun.cc.o: CMakeFiles/TTarg.dir/flags.make
+CMakeFiles/TTarg.dir/src/TTargRun.cc.o: ../src/TTargRun.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TTarg.dir/src/TTargRun.cc.o"
+	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/TTargRun.cc.o -c /local/cms/user/revering/geant/si_target/src/TTargRun.cc
+
+CMakeFiles/TTarg.dir/src/TTargRun.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TTarg.dir/src/TTargRun.cc.i"
+	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /local/cms/user/revering/geant/si_target/src/TTargRun.cc > CMakeFiles/TTarg.dir/src/TTargRun.cc.i
+
+CMakeFiles/TTarg.dir/src/TTargRun.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TTarg.dir/src/TTargRun.cc.s"
+	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /local/cms/user/revering/geant/si_target/src/TTargRun.cc -o CMakeFiles/TTarg.dir/src/TTargRun.cc.s
+
+CMakeFiles/TTarg.dir/src/TTargRun.cc.o.requires:
+
+.PHONY : CMakeFiles/TTarg.dir/src/TTargRun.cc.o.requires
+
+CMakeFiles/TTarg.dir/src/TTargRun.cc.o.provides: CMakeFiles/TTarg.dir/src/TTargRun.cc.o.requires
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargRun.cc.o.provides.build
+.PHONY : CMakeFiles/TTarg.dir/src/TTargRun.cc.o.provides
+
+CMakeFiles/TTarg.dir/src/TTargRun.cc.o.provides.build: CMakeFiles/TTarg.dir/src/TTargRun.cc.o
+
+
 CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o: CMakeFiles/TTarg.dir/flags.make
 CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o: ../src/G4eDarkBremsstrahlung.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o"
 	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o -c /local/cms/user/revering/geant/si_target/src/G4eDarkBremsstrahlung.cc
 
 CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.i: cmake_force
@@ -201,9 +225,33 @@ CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o.provides: CMakeFiles/TTarg.d
 CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o.provides.build: CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o
 
 
+CMakeFiles/TTarg.dir/src/TTargHit.cc.o: CMakeFiles/TTarg.dir/flags.make
+CMakeFiles/TTarg.dir/src/TTargHit.cc.o: ../src/TTargHit.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TTarg.dir/src/TTargHit.cc.o"
+	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/TTargHit.cc.o -c /local/cms/user/revering/geant/si_target/src/TTargHit.cc
+
+CMakeFiles/TTarg.dir/src/TTargHit.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TTarg.dir/src/TTargHit.cc.i"
+	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /local/cms/user/revering/geant/si_target/src/TTargHit.cc > CMakeFiles/TTarg.dir/src/TTargHit.cc.i
+
+CMakeFiles/TTarg.dir/src/TTargHit.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TTarg.dir/src/TTargHit.cc.s"
+	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /local/cms/user/revering/geant/si_target/src/TTargHit.cc -o CMakeFiles/TTarg.dir/src/TTargHit.cc.s
+
+CMakeFiles/TTarg.dir/src/TTargHit.cc.o.requires:
+
+.PHONY : CMakeFiles/TTarg.dir/src/TTargHit.cc.o.requires
+
+CMakeFiles/TTarg.dir/src/TTargHit.cc.o.provides: CMakeFiles/TTarg.dir/src/TTargHit.cc.o.requires
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargHit.cc.o.provides.build
+.PHONY : CMakeFiles/TTarg.dir/src/TTargHit.cc.o.provides
+
+CMakeFiles/TTarg.dir/src/TTargHit.cc.o.provides.build: CMakeFiles/TTarg.dir/src/TTargHit.cc.o
+
+
 CMakeFiles/TTarg.dir/src/TTargPhysicsList.cc.o: CMakeFiles/TTarg.dir/flags.make
 CMakeFiles/TTarg.dir/src/TTargPhysicsList.cc.o: ../src/TTargPhysicsList.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TTarg.dir/src/TTargPhysicsList.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TTarg.dir/src/TTargPhysicsList.cc.o"
 	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/TTargPhysicsList.cc.o -c /local/cms/user/revering/geant/si_target/src/TTargPhysicsList.cc
 
 CMakeFiles/TTarg.dir/src/TTargPhysicsList.cc.i: cmake_force
@@ -227,7 +275,7 @@ CMakeFiles/TTarg.dir/src/TTargPhysicsList.cc.o.provides.build: CMakeFiles/TTarg.
 
 CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlungModel.cc.o: CMakeFiles/TTarg.dir/flags.make
 CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlungModel.cc.o: ../src/G4muDarkBremsstrahlungModel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlungModel.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlungModel.cc.o"
 	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlungModel.cc.o -c /local/cms/user/revering/geant/si_target/src/G4muDarkBremsstrahlungModel.cc
 
 CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlungModel.cc.i: cmake_force
@@ -251,7 +299,7 @@ CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlungModel.cc.o.provides.build: CMakeF
 
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: CMakeFiles/TTarg.dir/flags.make
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: ../src/TTargDetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o"
 	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o -c /local/cms/user/revering/geant/si_target/src/TTargDetectorConstruction.cc
 
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.i: cmake_force
@@ -275,7 +323,7 @@ CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o.provides.build: CMakeFil
 
 CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlung.cc.o: CMakeFiles/TTarg.dir/flags.make
 CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlung.cc.o: ../src/G4muDarkBremsstrahlung.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlung.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlung.cc.o"
 	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlung.cc.o -c /local/cms/user/revering/geant/si_target/src/G4muDarkBremsstrahlung.cc
 
 CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlung.cc.i: cmake_force
@@ -299,7 +347,7 @@ CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlung.cc.o.provides.build: CMakeFiles/
 
 CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o: CMakeFiles/TTarg.dir/flags.make
 CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o: ../src/TTargSteppingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o"
 	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o -c /local/cms/user/revering/geant/si_target/src/TTargSteppingAction.cc
 
 CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.i: cmake_force
@@ -321,9 +369,33 @@ CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o.provides: CMakeFiles/TTarg.dir
 CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o.provides.build: CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o
 
 
+CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o: CMakeFiles/TTarg.dir/flags.make
+CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o: ../src/TTargSensitiveDetector.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o"
+	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o -c /local/cms/user/revering/geant/si_target/src/TTargSensitiveDetector.cc
+
+CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.i"
+	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /local/cms/user/revering/geant/si_target/src/TTargSensitiveDetector.cc > CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.i
+
+CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.s"
+	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /local/cms/user/revering/geant/si_target/src/TTargSensitiveDetector.cc -o CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.s
+
+CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o.requires:
+
+.PHONY : CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o.requires
+
+CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o.provides: CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o.requires
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o.provides.build
+.PHONY : CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o.provides
+
+CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o.provides.build: CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o
+
+
 CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlungModel.cc.o: CMakeFiles/TTarg.dir/flags.make
 CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlungModel.cc.o: ../src/G4eDarkBremsstrahlungModel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlungModel.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlungModel.cc.o"
 	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlungModel.cc.o -c /local/cms/user/revering/geant/si_target/src/G4eDarkBremsstrahlungModel.cc
 
 CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlungModel.cc.i: cmake_force
@@ -347,7 +419,7 @@ CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlungModel.cc.o.provides.build: CMakeFi
 
 CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o: CMakeFiles/TTarg.dir/flags.make
 CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o: ../src/TTargActionInitialization.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o"
 	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o -c /local/cms/user/revering/geant/si_target/src/TTargActionInitialization.cc
 
 CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.i: cmake_force
@@ -376,12 +448,15 @@ TTarg_OBJECTS = \
 "CMakeFiles/TTarg.dir/src/TTargEventAction.cc.o" \
 "CMakeFiles/TTarg.dir/src/G4DarkPhoton.cc.o" \
 "CMakeFiles/TTarg.dir/src/TTargPrimaryGeneratorAction.cc.o" \
+"CMakeFiles/TTarg.dir/src/TTargRun.cc.o" \
 "CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o" \
+"CMakeFiles/TTarg.dir/src/TTargHit.cc.o" \
 "CMakeFiles/TTarg.dir/src/TTargPhysicsList.cc.o" \
 "CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlungModel.cc.o" \
 "CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o" \
 "CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlung.cc.o" \
 "CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o" \
+"CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o" \
 "CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlungModel.cc.o" \
 "CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o"
 
@@ -393,12 +468,15 @@ TTarg: CMakeFiles/TTarg.dir/src/TTargRunAction.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/TTargEventAction.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/G4DarkPhoton.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/TTargPrimaryGeneratorAction.cc.o
+TTarg: CMakeFiles/TTarg.dir/src/TTargRun.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o
+TTarg: CMakeFiles/TTarg.dir/src/TTargHit.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/TTargPhysicsList.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlungModel.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlung.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o
+TTarg: CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlungModel.cc.o
 TTarg: CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o
 TTarg: CMakeFiles/TTarg.dir/build.make
@@ -445,7 +523,7 @@ TTarg: /local/cms/other/geant4/geant4.10.02.p02/lib64/libG4intercoms.so
 TTarg: /local/cms/other/geant4/geant4.10.02.p02/lib64/libG4global.so
 TTarg: /local/cms/other/geant4/geant4.10.02.p02/lib64/libG4clhep.so
 TTarg: CMakeFiles/TTarg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable TTarg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/local/cms/user/revering/geant/si_target/TTarg-Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable TTarg"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TTarg.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -458,12 +536,15 @@ CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/TTargRunAction.cc.o.requ
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/TTargEventAction.cc.o.requires
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/G4DarkPhoton.cc.o.requires
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/TTargPrimaryGeneratorAction.cc.o.requires
+CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/TTargRun.cc.o.requires
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlung.cc.o.requires
+CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/TTargHit.cc.o.requires
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/TTargPhysicsList.cc.o.requires
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlungModel.cc.o.requires
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o.requires
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/G4muDarkBremsstrahlung.cc.o.requires
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/TTargSteppingAction.cc.o.requires
+CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o.requires
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/G4eDarkBremsstrahlungModel.cc.o.requires
 CMakeFiles/TTarg.dir/requires: CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o.requires
 

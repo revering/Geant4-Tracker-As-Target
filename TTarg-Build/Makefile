@@ -58,8 +58,8 @@ CMAKE_BINARY_DIR = /local/cms/user/revering/geant/si_target/TTarg-Build
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/cmake/3.5.2/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -383,6 +383,33 @@ src/TTargEventAction.cc.s:
 	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargEventAction.cc.s
 .PHONY : src/TTargEventAction.cc.s
 
+src/TTargHit.o: src/TTargHit.cc.o
+
+.PHONY : src/TTargHit.o
+
+# target to build an object file
+src/TTargHit.cc.o:
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargHit.cc.o
+.PHONY : src/TTargHit.cc.o
+
+src/TTargHit.i: src/TTargHit.cc.i
+
+.PHONY : src/TTargHit.i
+
+# target to preprocess a source file
+src/TTargHit.cc.i:
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargHit.cc.i
+.PHONY : src/TTargHit.cc.i
+
+src/TTargHit.s: src/TTargHit.cc.s
+
+.PHONY : src/TTargHit.s
+
+# target to generate assembly for a file
+src/TTargHit.cc.s:
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargHit.cc.s
+.PHONY : src/TTargHit.cc.s
+
 src/TTargPhysicsList.o: src/TTargPhysicsList.cc.o
 
 .PHONY : src/TTargPhysicsList.o
@@ -437,6 +464,33 @@ src/TTargPrimaryGeneratorAction.cc.s:
 	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargPrimaryGeneratorAction.cc.s
 .PHONY : src/TTargPrimaryGeneratorAction.cc.s
 
+src/TTargRun.o: src/TTargRun.cc.o
+
+.PHONY : src/TTargRun.o
+
+# target to build an object file
+src/TTargRun.cc.o:
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargRun.cc.o
+.PHONY : src/TTargRun.cc.o
+
+src/TTargRun.i: src/TTargRun.cc.i
+
+.PHONY : src/TTargRun.i
+
+# target to preprocess a source file
+src/TTargRun.cc.i:
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargRun.cc.i
+.PHONY : src/TTargRun.cc.i
+
+src/TTargRun.s: src/TTargRun.cc.s
+
+.PHONY : src/TTargRun.s
+
+# target to generate assembly for a file
+src/TTargRun.cc.s:
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargRun.cc.s
+.PHONY : src/TTargRun.cc.s
+
 src/TTargRunAction.o: src/TTargRunAction.cc.o
 
 .PHONY : src/TTargRunAction.o
@@ -463,6 +517,33 @@ src/TTargRunAction.s: src/TTargRunAction.cc.s
 src/TTargRunAction.cc.s:
 	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargRunAction.cc.s
 .PHONY : src/TTargRunAction.cc.s
+
+src/TTargSensitiveDetector.o: src/TTargSensitiveDetector.cc.o
+
+.PHONY : src/TTargSensitiveDetector.o
+
+# target to build an object file
+src/TTargSensitiveDetector.cc.o:
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.o
+.PHONY : src/TTargSensitiveDetector.cc.o
+
+src/TTargSensitiveDetector.i: src/TTargSensitiveDetector.cc.i
+
+.PHONY : src/TTargSensitiveDetector.i
+
+# target to preprocess a source file
+src/TTargSensitiveDetector.cc.i:
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.i
+.PHONY : src/TTargSensitiveDetector.cc.i
+
+src/TTargSensitiveDetector.s: src/TTargSensitiveDetector.cc.s
+
+.PHONY : src/TTargSensitiveDetector.s
+
+# target to generate assembly for a file
+src/TTargSensitiveDetector.cc.s:
+	$(MAKE) -f CMakeFiles/TTarg.dir/build.make CMakeFiles/TTarg.dir/src/TTargSensitiveDetector.cc.s
+.PHONY : src/TTargSensitiveDetector.cc.s
 
 src/TTargSteppingAction.o: src/TTargSteppingAction.cc.o
 
@@ -555,15 +636,24 @@ help:
 	@echo "... src/TTargEventAction.o"
 	@echo "... src/TTargEventAction.i"
 	@echo "... src/TTargEventAction.s"
+	@echo "... src/TTargHit.o"
+	@echo "... src/TTargHit.i"
+	@echo "... src/TTargHit.s"
 	@echo "... src/TTargPhysicsList.o"
 	@echo "... src/TTargPhysicsList.i"
 	@echo "... src/TTargPhysicsList.s"
 	@echo "... src/TTargPrimaryGeneratorAction.o"
 	@echo "... src/TTargPrimaryGeneratorAction.i"
 	@echo "... src/TTargPrimaryGeneratorAction.s"
+	@echo "... src/TTargRun.o"
+	@echo "... src/TTargRun.i"
+	@echo "... src/TTargRun.s"
 	@echo "... src/TTargRunAction.o"
 	@echo "... src/TTargRunAction.i"
 	@echo "... src/TTargRunAction.s"
+	@echo "... src/TTargSensitiveDetector.o"
+	@echo "... src/TTargSensitiveDetector.i"
+	@echo "... src/TTargSensitiveDetector.s"
 	@echo "... src/TTargSteppingAction.o"
 	@echo "... src/TTargSteppingAction.i"
 	@echo "... src/TTargSteppingAction.s"

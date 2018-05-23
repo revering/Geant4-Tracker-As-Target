@@ -29,13 +29,13 @@ TTargSteppingAction::~TTargSteppingAction()
 
 void TTargSteppingAction::UserSteppingAction(const G4Step* step)
 {
-   if((fEventAction->GetnBrem())==0)
+/*   if((fEventAction->GetnBrem())==0)
    {
       G4Track* track = step->GetTrack();
       const G4DynamicParticle* p = track->GetDynamicParticle();
       const G4ParticleDefinition* theParticleDefinition = p->GetParticleDefinition();
       if( theParticleDefinition == G4DarkPhoton::DarkPhoton())
-      {
+      {*/
 /*        G4Region* region;
 	G4String regName;
 	G4ProductionCuts* cut;
@@ -48,13 +48,13 @@ void TTargSteppingAction::UserSteppingAction(const G4Step* step)
         cut->SetProductionCut(0.01*CLHEP::mm,G4ProductionCuts::GetIndex("gamma"));
 	region->SetProductionCuts(cut);
 */
-         G4bool active = false;
+/*         G4bool active = false;
          G4String pname = "eDBrem";
          G4ProcessTable* ptable = G4ProcessTable::GetProcessTable();
          ptable->SetProcessActivation(pname, active); 
 	 fEventAction->incnBrem();
       }
-   }
+   }*/
 /*   G4Track* track = step->GetTrack();
    const G4DynamicParticle* p = track->GetDynamicParticle();
    const G4ParticleDefinition* theParticleDefinition = p->GetParticleDefinition();

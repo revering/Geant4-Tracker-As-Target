@@ -1,5 +1,7 @@
 #include "TTargEventAction.hh"
 #include "TTargRunAction.hh"
+#include "TTargAnalysis.hh"
+#include "TTargHit.hh"
 
 #include "G4Event.hh"
 #include "G4RunManager.hh"
@@ -7,6 +9,9 @@
 #include "G4RegionStore.hh"
 #include "G4ProductionCuts.hh"
 #include "G4ProcessTable.hh"
+#include "G4HCofThisEvent.hh"
+#include "G4VHitsCollection.hh"
+#include "G4SDManager.hh"
 
 TTargEventAction::TTargEventAction(TTargRunAction* runAction)
  : G4UserEventAction(),
@@ -42,8 +47,13 @@ void TTargEventAction::BeginOfEventAction(const G4Event*)
      rstnBrem();
 }
 
-void TTargEventAction::EndOfEventAction(const G4Event*)
+void TTargEventAction::EndOfEventAction(const G4Event* event)
 {
+   auto anMan = G4AnalysisManager::Instance();
+   auto hc = event->GetHCofThisEvent()->GetHC(1);
+   auto hit = static_cast<TTargHit*>(hc->GetHit(0));
+   G4double energy = hit->GetEnergy();
+   anMan->FillH1(0,energy,1);
 }
 
 
