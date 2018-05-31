@@ -50,10 +50,29 @@ void TTargEventAction::BeginOfEventAction(const G4Event*)
 void TTargEventAction::EndOfEventAction(const G4Event* event)
 {
    auto anMan = G4AnalysisManager::Instance();
-   auto hc = event->GetHCofThisEvent()->GetHC(1);
-   auto hit = static_cast<TTargHit*>(hc->GetHit(0));
-   G4double energy = hit->GetEnergy();
-   anMan->FillH1(0,energy,1);
+   auto hce = event->GetHCofThisEvent();
+   auto hc = hce->GetHC(1);
+   G4bool badbrem = false;
+   G4bool darkbrem = false;
+   G4bool regbrem = false;
+   for (unsigned long i = 0; i < hc->GetSize(); ++i) 
+   {
+      auto hit = static_cast<TTargHit*>(hc->GetHit(i));
+      G4String pID = hit->GetParticleId();
+      if ((pID == "e-")&&(hit->GetEnergy()>10)) {badbrem = true;}
+   }
+
+   auto hc2 = hce->GetHC(0);
+   for (unsigned long i = 0; i < hc2->GetSize(); ++i) 
+   {
+      auto hit = static_cast<TTargHit*>(hc2->GetHit(i));
+      G4String pID = hit->GetParticleId();
+      if ((pID == "e-")&&(hit->GetEnergy()>0.1)) {regbrem = true;}
+      if (pID == "DarkPhoton") {darkbrem = true;}
+   }
+
+   if (regbrem&&(!badbrem)) {anMan->FillH1(anMan->GetH1Id("Regular"), 1, 1);}
+   if (darkbrem) {anMan->FillH1(anMan->GetH1Id("Dark"),1,1);}
 }
 
 

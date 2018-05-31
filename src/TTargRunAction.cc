@@ -17,7 +17,8 @@ TTargRunAction::TTargRunAction()
    G4AnalysisManager* anMan = G4AnalysisManager::Instance();
    anMan->SetFileName("TestOutput");
 
-   anMan->CreateH1("Test","Test", 50, 0., 50);
+   anMan->CreateH1("Regular","Regular", 2, 0., 2);
+   anMan->CreateH1("Dark","Dark", 2, 0., 2);
 
 }
 

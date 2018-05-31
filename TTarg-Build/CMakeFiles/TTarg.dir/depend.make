@@ -789,6 +789,8 @@ CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o: /local/cms/other/geant4
 CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o: ../src/TTargActionInitialization.cc
 
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: ../include/TTargDetectorConstruction.hh
+CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: ../include/TTargHit.hh
+CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: ../include/TTargSensitiveDetector.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/CLHEP/Geometry/BasicVector3D.h
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/CLHEP/Geometry/Normal3D.h
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/CLHEP/Geometry/Point3D.h
@@ -897,6 +899,7 @@ CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4GRSVolume.icc
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4GeomSplitter.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4HCofThisEvent.hh
+CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4HCtable.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4IonisParamElm.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4IonisParamMat.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4Isotope.hh
@@ -967,6 +970,8 @@ CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4RotationMatrix.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4RunManager.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4RunManagerKernel.hh
+CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SDManager.hh
+CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SDStructure.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SandiaTable.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SensitiveVolumeList.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SmartTrackStack.hh
@@ -988,6 +993,7 @@ CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4String.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4String.icc
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SystemOfUnits.hh
+CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4THitsCollection.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4Threading.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4ThreeVector.hh
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o: /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4TouchableHandle.hh

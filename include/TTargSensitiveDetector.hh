@@ -17,6 +17,7 @@ class TTargSensitiveDetector : public G4VSensitiveDetector
 
    private:
       TTargHitsCollection* fHitsCollection;
+      G4int fHCID;
 
 };
 

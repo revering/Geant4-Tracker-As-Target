@@ -790,6 +790,8 @@ CMakeFiles/TTarg.dir/src/TTargActionInitialization.cc.o
  /local/cms/user/revering/geant/si_target/src/TTargActionInitialization.cc
 CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o
  ../include/TTargDetectorConstruction.hh
+ ../include/TTargHit.hh
+ ../include/TTargSensitiveDetector.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/CLHEP/Geometry/Normal3D.h
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/CLHEP/Geometry/Point3D.h
@@ -898,6 +900,7 @@ CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4GRSVolume.icc
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4GeomSplitter.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4HCofThisEvent.hh
+ /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4HCtable.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4IonisParamElm.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4IonisParamMat.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4Isotope.hh
@@ -968,6 +971,8 @@ CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4RotationMatrix.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4RunManager.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4RunManagerKernel.hh
+ /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SDManager.hh
+ /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SDStructure.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SandiaTable.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SensitiveVolumeList.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SmartTrackStack.hh
@@ -989,6 +994,7 @@ CMakeFiles/TTarg.dir/src/TTargDetectorConstruction.cc.o
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4String.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4String.icc
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4SystemOfUnits.hh
+ /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4THitsCollection.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4Threading.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4ThreeVector.hh
  /local/cms/other/geant4/geant4.10.02.p02/include/Geant4/G4TouchableHandle.hh

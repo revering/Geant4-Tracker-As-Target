@@ -4711,6 +4711,8 @@ TTargSteppingAction.hh
 /local/cms/user/revering/geant/si_target/src/TTargDetectorConstruction.cc
 TTargDetectorConstruction.hh
 /local/cms/user/revering/geant/si_target/src/TTargDetectorConstruction.hh
+TTargSensitiveDetector.hh
+/local/cms/user/revering/geant/si_target/src/TTargSensitiveDetector.hh
 G4Region.hh
 /local/cms/user/revering/geant/si_target/src/G4Region.hh
 G4RunManager.hh
@@ -4727,6 +4729,8 @@ G4SystemOfUnits.hh
 /local/cms/user/revering/geant/si_target/src/G4SystemOfUnits.hh
 G4VSensitiveDetector.hh
 /local/cms/user/revering/geant/si_target/src/G4VSensitiveDetector.hh
+G4SDManager.hh
+/local/cms/user/revering/geant/si_target/src/G4SDManager.hh
 
 /local/cms/user/revering/geant/si_target/src/TTargEventAction.cc
 TTargEventAction.hh

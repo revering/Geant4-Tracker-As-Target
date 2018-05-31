@@ -9,14 +9,15 @@ class TTargHit : public G4VHit
 {
    public:
       TTargHit();
-      TTargHit(G4double e, G4ThreeVector m, G4double pID);
+      TTargHit(G4double e, G4ThreeVector m, G4String pID);
       virtual ~TTargHit();
       G4double GetEnergy() {return energy;}
+      G4String GetParticleId() {return particleID;}
 
    private:
       G4ThreeVector mom;
       G4double energy;
-      G4double particleID;
+      G4String particleID;
 
 };
 

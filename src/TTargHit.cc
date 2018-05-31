@@ -7,10 +7,10 @@ TTargHit::TTargHit()
 : G4VHit(), 
   mom(0), 
   energy(0.), 
-  particleID(0)
+  particleID("Nothing")
 {}
 
-TTargHit::TTargHit(G4double e, G4ThreeVector m, G4double pID) 
+TTargHit::TTargHit(G4double e, G4ThreeVector m, G4String pID) 
 : G4VHit(), 
   mom(m), 
   energy(e),

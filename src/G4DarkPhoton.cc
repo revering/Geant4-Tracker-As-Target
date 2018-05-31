@@ -41,7 +41,7 @@ G4DarkPhoton* G4DarkPhoton::DarkPhoton()
    if(!theDarkPhoton) {
      
       const G4String&     name = "DarkPhoton";
-      G4double            mass = 100.*MeV; 
+      G4double            mass = 1500.0*MeV; 
       G4double            width = 0.;       
       G4double            charge = 0;
       G4int               iSpin = 0;

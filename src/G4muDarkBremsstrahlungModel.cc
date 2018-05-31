@@ -32,8 +32,6 @@ G4muDarkBremsstrahlungModel::G4muDarkBremsstrahlungModel(const G4ParticleDefinit
      particle(0),
      isMuon(true),
      probsup(1.0),
-     MigdalConstant(classic_electr_radius*electron_Compton_length*electron_Compton_length*4.0*pi),
-     LPMconstant(fine_structure_const*electron_mass_c2*electron_mass_c2/(4.*pi*hbarc)),
      isInitialised(false)
 {
    if(p) { SetParticle(p); }
@@ -117,12 +115,17 @@ void G4muDarkBremsstrahlungModel::Initialise(const G4ParticleDefinition* p,
    isInitialised = true;
 }
 
-G4double G4muDarkBremsstrahlungModel::ComputeDEDXPerVolume(
+
+/*G4double G4muDarkBremsstrahlungModel::ComputeDEDXPerVolume(
                                  const G4Material* material,
 				 const G4ParticleDefinition* p,
 				       G4double kineticEnergy,
 				       G4double cutEnergy)
 {
+   return 0.0;
+}
+*/
+/*
    if(!particle)
    {
       SetParticle(p);
@@ -233,10 +236,9 @@ G4double G4muDarkBremsstrahlungModel::ComputeDEDXPerVolume(
    if(dedx < 0.) { dedx = 0.; }
    return dedx;
 }
+*/
 
-G4double G4muDarkBremsstrahlungModel::ComputeBremLoss(G4double Z, G4double T, G4double Cut)
- // compute loss due to soft brems
-{
+/*
    static const G4double beta=1.0, ksi=2.0;
    static const G4double clossh = 0.254 , closslow = 1./3. , alosslow = 1. ;
    static const G4double Tlim= 10.*MeV ;
@@ -333,7 +335,8 @@ G4double G4muDarkBremsstrahlungModel::ComputeBremLoss(G4double Z, G4double T, G4
  
    return loss;
 }
-
+*/
+/*
 G4double G4muDarkBremsstrahlungModel::PositronCorrFactorLoss(G4double Z, G4double kineticEnergy, G4double cut)
 {
    static const G4double K = 132.9416*eV ;
@@ -353,7 +356,8 @@ G4double G4muDarkBremsstrahlungModel::PositronCorrFactorLoss(G4double Z, G4doubl
 
 return factor;
 }
-
+*/
+/*
 G4double G4muDarkBremsstrahlungModel::CrossSectionPerVolume(
                                     const G4Material* material,
                                     const G4ParticleDefinition* p,
@@ -430,6 +434,20 @@ G4double G4muDarkBremsstrahlungModel::CrossSectionPerVolume(
   
    return cross;
 }   
+*/
+
+G4double G4muDarkBremsstrahlungModel::DsigmaDx (double x, void * pp)
+{
+   ParamsForChi* params = (ParamsForChi*)pp;
+
+   G4double MMu = 105.658/1000.;
+   G4double beta = sqrt(1- (params->MMA)*(params->MMA)/(params->EE0)/(params->EE0));
+   G4double num = 1.-x+x*x/3.;
+   G4double denom = (params->MMA)*(params->MMA)*(1.-x)/x+MMu*MMu*x;
+   G4double DsDx = beta*num/denom;
+
+   return DsDx;
+}
 
 G4double G4muDarkBremsstrahlungModel::chi(double t, void * pp) 
 {
@@ -440,13 +458,13 @@ G4double G4muDarkBremsstrahlungModel::chi(double t, void * pp)
  * params->MMA;
  * params->EE0;
  */
-   G4double Mmu = 0.10568;
+   G4double Me = 0.511/1000.;
    G4double MUp = 2.79;
    G4double Mpr = 0.938;
 
    G4double d = 0.164/pow((params->AA),2./3.);
-   G4double ap = 773.0/Mmu/pow((params->ZZ),2./3.);
-   G4double a = 111.0/Mmu/pow((params->ZZ),1./3.);
+   G4double ap = 773.0/Me/pow((params->ZZ),2./3.);
+   G4double a = 111.0/Me/pow((params->ZZ),1./3.);
    G4double G2el = (params->ZZ)*(params->ZZ)*a*a*a*a*t*t/(1.0+a*a*t)/(1.0+a*a*t)/(1.0+t/d)/(1.0+t/d);
    G4double G2in = (params->ZZ)*ap*ap*ap*ap*t*t/(1.0+ap*ap*t)/(1.0+ap*ap*t)/(1.0+t/0.71)/(1.0+t/0.71)
     /(1.0+t/0.71)/(1.0+t/0.71)/(1.0+t/0.71)/(1.0+t/0.71)/(1.0+t/0.71)/(1.0+t/0.71)
@@ -474,7 +492,7 @@ G4double G4muDarkBremsstrahlungModel::ComputeCrossSectionPerAtom(
    }
 
    E0 = E0 / CLHEP::GeV;
-   G4double Mmu = 0.10568;
+   G4double Mmu = MuonMass/1000.;
    if(E0 < 2.*MA) return 0.;
 
    //begin: chi-formfactor calculation
@@ -504,17 +522,31 @@ G4double G4muDarkBremsstrahlungModel::ComputeCrossSectionPerAtom(
    
    G4double ChiRes = result;
    gsl_integration_workspace_free (w);
-    
-   G4double beta = sqrt(1. - MA*MA/(E0*E0));
-   G4double cutoff1 = Mmu/MA;
-   G4double cutoff2 = MA/E0;
-   G4double cutoff = cutoff2;
+   
+   gsl_integration_workspace * dxspace
+      = gsl_integration_workspace_alloc (1000);
+   gsl_function G;
+   G.function = &DsigmaDx;
+   G.params = &alpha;
+   G4double xmin = 0;
+   G4double xmax = 1;
+   if((Mmu/E0)>(MA/E0)) xmax = 1-Mmu/E0;
+   else xmax = 1-MA/E0;
+   G4double res, err;
+
+   gsl_integration_qags (&G, xmin, xmax, 0, 1e-7, 1000,
+                         dxspace, &res, &err);
+
+   G4double DsDx = res;
+   gsl_integration_workspace_free(dxspace);      
+      
+   
    G4double GeVtoPb = 3.894E08;   
    G4double alphaEW = 1.0/137.0;
-   G4double epsilBench = 0.0001;
- 
-   if(cutoff1 > cutoff2) cutoff = cutoff1;
-   cross= GeVtoPb*(4./3.)*alphaEW*alphaEW*alphaEW*epsilBench*epsilBench*ChiRes*beta*log(1./(cutoff*cutoff))/(MA*MA)*CLHEP::picobarn;
+//   G4double epsilBench = 0.0001;
+   G4double epsilBench = 1;
+
+   cross= GeVtoPb*4.*alphaEW*alphaEW*alphaEW*epsilBench*epsilBench*ChiRes*DsDx*CLHEP::picobarn;
    if(cross < 0.) 
    { 
       cross = 0.; 
@@ -522,11 +554,11 @@ G4double G4muDarkBremsstrahlungModel::ComputeCrossSectionPerAtom(
 //   G4cout << "A mass: " << MA << G4endl;
 //   G4cout << "Kinetic Energy: " << E0 << " Cross section: " << cross << G4endl;
    E0 = E0*CLHEP::GeV;
-   G4cout << cross*1E14 << "\n";
-   return cross*1E14;
+//   G4cout << "Muon Energy is: " << E0/CLHEP::GeV << ". Cross section is: " << cross/CLHEP::picobarn << " picobarns.\n";
+   return cross*1E5;
 }
 
-   G4double G4muDarkBremsstrahlungModel::PositronCorrFactorSigma( G4double Z,
+/*   G4double G4muDarkBremsstrahlungModel::PositronCorrFactorSigma( G4double Z,
    G4double kineticEnergy, G4double cut)
 
 //Calculates the correction factor for the total cross section of the positron
@@ -546,7 +578,7 @@ G4double G4muDarkBremsstrahlungModel::ComputeCrossSectionPerAtom(
    G4double alfa = (1. - eta)/eta;
    return eta*pow((1. - cut/kineticEnergy), alfa);
 }
-
+*/
 G4DataVector* G4muDarkBremsstrahlungModel::ComputePartialSumSigma(
                                         const G4Material* material,
                                         G4double kineticEnergy,
@@ -583,14 +615,13 @@ void G4muDarkBremsstrahlungModel::SampleSecondaries(std::vector<G4DynamicParticl
    if(tmin >= tmax) { return; }
    // limits of the energy sampling
    E0  = E0 + MuonMass;
-   G4double Mmu = 0.10565;
+   G4double Mmu = MuonMass/1000.;
    E0 = E0 / 1000.;
 
    G4double Xmin = MA/E0;
    G4double Xmax = 0.998;
    if(Xmin>Xmax) { return; }
    double ThetaMaxA = 0.06;
-   double ThetaMaxEl = sqrt(MA*Mmu)/E0;
    double integratedX = -log(1-Xmax);
    double XAcc, ThetaAcc, PhiAcc;
    double PhiEv = G4UniformRand() * 2. * 3.1415962;
@@ -603,7 +634,7 @@ void G4muDarkBremsstrahlungModel::SampleSecondaries(std::vector<G4DynamicParticl
       double intTzero = 1./ThetaConst*log(1./ThetaConst/20.);
       double B = G4UniformRand()*(intTzero-intTheta)+intTheta;
       double ThetaEv = -1./ThetaConst/20. + exp(ThetaConst*B);
-      double smax = 16./(MA*MA*(1.-XEv))/(ThetaConst*ThetaEv+0.05)/E0/E0;
+      double smax = 16./(MA*MA*(1.-XEv))/(ThetaConst*ThetaEv+MA/E0)/E0/E0;
       double UU = G4UniformRand() * smax;
 
       double Uxtheta = E0*E0*ThetaEv*ThetaEv*XEv + MA*MA*(1.0-XEv)/XEv + Mmu*Mmu*XEv;
@@ -611,14 +642,13 @@ void G4muDarkBremsstrahlungModel::SampleSecondaries(std::vector<G4DynamicParticl
       double BB = (1. - XEv)*(1. - XEv)*MA*MA/(Uxtheta*Uxtheta*Uxtheta*Uxtheta);
       double CC = MA*MA - Uxtheta*XEv/(1. - XEv);
       double sigma = ThetaEv * XEv * (AA + BB*CC);
-//      printf("Sigma: %e Smax: %e X: %e CapMax: %e\n", sigma, smax, XEv, capMax);
       if(sigma > smax)  printf ("Maximum violated: ratio = % .18f, X: %e, Theta: %e\n", sigma/smax, XEv, ThetaEv);
 
       if(sigma >= UU) 
       {
          XAcc = XEv;
          ThetaAcc = ThetaEv;
-         PhiAcc = iii;
+         PhiAcc = PhiEv;
 /*         fParticle.E0 = XAcc;
          fParticle.Theta = ThetaAcc;
          fParticle.Phi = PhiAcc;
@@ -649,7 +679,6 @@ void G4muDarkBremsstrahlungModel::SampleSecondaries(std::vector<G4DynamicParticl
                               - dpMomentum*dphoton->GetMomentumDirection()).unit();
  
    // energy of primary
-   G4double finalE = E0*(1-XAcc);
    G4double finalmomentum = (totMomentum*dp->GetMomentumDirection()-dpMomentum*dphoton->GetMomentumDirection()).mag();
    G4double finalKE = sqrt(finalmomentum*finalmomentum+MuonMass*MuonMass) - MuonMass;
   
@@ -702,7 +731,7 @@ void G4muDarkBremsstrahlungModel::SampleSecondaries(std::vector<G4DynamicParticl
  }
  
  //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo....
- 
+/* 
  G4double G4muDarkBremsstrahlungModel::SupressionFunction(const G4Material* material,
                                   G4double kineticEnergy, G4double gammaEnergy)
  {
@@ -746,4 +775,4 @@ void G4muDarkBremsstrahlungModel::SampleSecondaries(std::vector<G4DynamicParticl
    } 
    return supr;
 }
-
+*/

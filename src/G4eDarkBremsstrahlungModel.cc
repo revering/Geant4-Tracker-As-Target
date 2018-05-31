@@ -254,16 +254,16 @@ G4double G4eDarkBremsstrahlungModel::ComputeCrossSectionPerAtom(
 
    G4double GeVtoPb = 3.894E08;   
    G4double alphaEW = 1.0/137.0;
-   G4double epsilBench = 0.0001;
+   G4double epsilBench = 1;
  
    cross= GeVtoPb*4.*alphaEW*alphaEW*alphaEW*epsilBench*epsilBench*ChiRes*DsDx*CLHEP::picobarn;
    if(cross < 0.) 
    { 
       cross = 0.; 
    }
-//   G4cout << "Kinetic Energy: " << E0 << " Cross section: " << cross << G4endl;
+   //G4cout << "Electron Energy: " << E0 << " Cross section: " << cross/CLHEP::picobarn << G4endl;
    E0 = E0*CLHEP::GeV;
-   return cross*1E14;
+   return cross;
 }
 
 G4DataVector* G4eDarkBremsstrahlungModel::ComputePartialSumSigma(

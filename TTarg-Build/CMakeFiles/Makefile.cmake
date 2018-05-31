@@ -36,6 +36,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.5.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.5.2/CMakeSystem.cmake"
+  "../TTarg.in"
+  "../TTarg.out"
   "../init_vis.mac"
   "../vis.mac"
   )
@@ -48,6 +50,8 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "TTarg.in"
+  "TTarg.out"
   "init_vis.mac"
   "vis.mac"
   "CMakeFiles/CMakeDirectoryInformation.cmake"

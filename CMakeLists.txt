@@ -21,8 +21,8 @@ add_executable(TTarg tracker_as_target.cc ${sources} ${headers})
 target_link_libraries(TTarg ${Geant4_LIBRARIES} ${GSL_LIBRARIES})
 
 set(TTarg_SCRIPTS
-#  G4DM.in
-#  G4DM.out
+  TTarg.in
+  TTarg.out
   init_vis.mac
 #  run1.mac
 #  run2.mac

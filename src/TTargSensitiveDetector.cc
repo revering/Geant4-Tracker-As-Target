@@ -8,7 +8,7 @@
 
 TTargSensitiveDetector::TTargSensitiveDetector(G4String name)
 : G4VSensitiveDetector(name),
-  fHitsCollection(nullptr)
+  fHitsCollection(nullptr), fHCID(-1)
 {
    collectionName.insert("HitsColl");
 }
@@ -20,20 +20,29 @@ void TTargSensitiveDetector::Initialize(G4HCofThisEvent* hce)
 {
    fHitsCollection = new TTargHitsCollection(SensitiveDetectorName, collectionName[0]);
 
-   hce->AddHitsCollection(1,fHitsCollection);
+   if (fHCID<0)
+   {
+      fHCID = G4SDManager::GetSDMpointer()->GetCollectionID(fHitsCollection);
+   }
+
+   hce->AddHitsCollection(fHCID,fHitsCollection);
+   G4cout<<fHCID <<"\n";
 }
 
 G4bool TTargSensitiveDetector::ProcessHits(G4Step* step, G4TouchableHistory*)
 {
    const G4Track* track = step->GetTrack();
-   if (track->GetDefinition()->GetParticleName() == "e-")
-   {
+   G4cout << "Found a hit, particle name is: " << track->GetDefinition()->GetParticleName() << "\n";
+//   if (track->GetDefinition()->GetParticleName() == "e-")
+//   {
       G4double e = track->GetKineticEnergy();
       G4ThreeVector m = track->GetMomentumDirection();
+      G4String Id = track->GetDefinition()->GetParticleName();
 //      G4double pID = track->GetDefinition()->GetParticleID();
-      auto hit = new TTargHit(e, m, 1);
+      auto hit = new TTargHit(e, m, Id);
       fHitsCollection->insert(hit);
-   }
+  // }
+
 
    return true;
 }

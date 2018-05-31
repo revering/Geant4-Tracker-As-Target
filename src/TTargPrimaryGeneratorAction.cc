@@ -17,7 +17,7 @@ TTargPrimaryGeneratorAction::TTargPrimaryGeneratorAction()
    fParticleGun = new G4ParticleGun(n_particle);
 
    G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
-   G4ParticleDefinition* particle = particleTable->FindParticle("e-");
+   G4ParticleDefinition* particle = particleTable->FindParticle("mu-");
    fParticleGun->SetParticleDefinition(particle);
    fParticleGun->SetParticlePosition(G4ThreeVector(0.,0.,0.));
    fParticleGun->SetParticleEnergy(45*GeV);
